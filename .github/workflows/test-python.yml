@@ -28,4 +28,4 @@ jobs:
       - name: Run locust
         run: |
           uvicorn application.main:app &
-          locust --config=tests/.locust.conf --locustfile=tests/locustfile.py --headless
+          cd tests/ && locust --config=.locust.conf --locustfile=locustfile.py --headless
