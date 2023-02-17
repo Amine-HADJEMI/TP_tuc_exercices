@@ -21,4 +21,4 @@ jobs:
           python -m pip install -r requirements.txt
       - name: lunch pylint
         run: |
-          pylint application/
+          pylint application/ tests/ --exit-zero
