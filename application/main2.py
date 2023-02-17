@@ -1,8 +1,12 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By 
+from selenium.webdriver.chrome.options import Options
 
 def return_title():
-  driver = webdriver.Chrome()
+  chrome_options = Options()
+  chrome_options.add_argument('--headless') 
+
+  driver = webdriver.Chrome(options=chrome_options)
 
   driver.get("https://www.reddit.com/")
   title_of_driver = driver.title 
@@ -11,6 +15,4 @@ def return_title():
 
   return title_of_driver
 
-
-if __name__ == "__main__":
-    return_title()
+return_title()
