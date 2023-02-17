@@ -27,4 +27,5 @@ jobs:
           coverage run -m pytest --profile
       - name: Run locust
         run: |
-          cd application/ && uvicorn main:app && cd ../tests/ && locust --config=.locust.conf
+          cd application/ && uvicorn main:app &
+          cd ../tests/ && locust --config=.locust.conf
