@@ -21,4 +21,4 @@ jobs:
           pip install selenium
       - name: Run main2 selenium
         run: |
-          cd application && python main2.py
+          cd application && python main2.py --headless
